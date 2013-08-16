@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/home/mjpark/cprog/efl_helloworld'
+let g:netrw_dirhist_2='/home/mjpark/cprog/efl_genlist'
+let g:netrw_dirhist_3='/home/mjpark/cprog/efl_win_example_minimal'

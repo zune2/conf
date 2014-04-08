@@ -15,6 +15,8 @@ set guifont=Terminus
 map <F1> K 
 map <F2> <ESC>:w!<CR> 
 map <F4> : !gcc -g % && ./a.out < expo.in <CR>
+map <F6> :w<CR>:!g++ % -g && (ulimit -c unlimited; ./a.out < %.in) <CR>
+map <F7> : !python ~/submit.py % <CR>
 map <F8> <ESC>:make<CR>
 
 nnoremap <F8> :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hls<CR>

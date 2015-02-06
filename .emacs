@@ -3,7 +3,7 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 ;;; color theme
-(load "/home/mjpark/cprog/lisp_prog/xemacs-theme.el")
+(load "~/cprog/lisp_prog/xemacs-theme.el")
 
 
 ;;

@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/mjpark/cprog/github/zune2.github.com/_site'
+let g:netrw_dirhist_2='/home/mjpark/cprog/github/zune2.github.com'
+let g:netrw_dirhist_3='/home/mjpark/cprog/github/zune2.github.com/_posts'
+let g:netrw_dirhist_4='/home/mjpark/cprog/github/zune2.github.com'

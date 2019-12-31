@@ -73,6 +73,12 @@ set t_ut=
 "colorscheme dracula
 
 
+
+highlight Normal ctermbg=None
+colorscheme codedark
+"colorscheme molokai
+
+
 let mapleader = ","
 let maplocalleader = "\\"
 
@@ -213,6 +219,4 @@ let g:syntastic_always_populate_loc_list = 1
 "let g:clang_auto_select=2  
 
 
-highlight Normal ctermbg=None
-colorscheme codedark
-"colorscheme molokai
+

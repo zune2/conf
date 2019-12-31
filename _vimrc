@@ -22,6 +22,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-scripts/taglist.vim'
+Plugin 'vim-script/gtags.vim'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'tomasiser/vim-code-dark'
 Plugin 'sickill/vim-monokai'
@@ -218,5 +219,40 @@ let g:syntastic_always_populate_loc_list = 1
 "let g:clang_snippets_engine='ultisnips'
 "let g:clang_auto_select=2  
 
+nmap <Leader>gd :Gtags <C-R>=expand("<cword>")<CR><CR> 
+",gr 입력. 현재 cursor가 위치한 string으로 reference검색.사용하는 곳의 위치를 보여줌.
+nmap <Leader>gr :Gtags -r <C-R>=expand("<cword>")<CR><CR>
+",gs 입력. 현재 cursor가 위치한 string으로 symbol 검색.(variable등)
+nmap <Leader>gs :Gtags -s <C-R>=expand("<cword>")<CR><CR>
+",gg 입력, --grep pattern 검색, 모든 파일에서 검색, (h, c, txt 등)
+nmap <Leader>gg :Gtags -go <C-R>=expand("<cword>")<CR><CR>
+",gp 입력, 파일명 검색 
+nmap <Leader>gp :Gtags -Po <C-R>=expand("<cword>")<CR><CR>
+",ge 입력, --regexp 검색. 
+nmap <Leader>ge :Gtags -ge <C-R>=expand("<cword>")<CR><CR>
+     
+" 위의 사용법과 동일하며, case sensitivity를 ignore
+nmap <Leader>igd :Gtags -i <C-R>=expand("<cword>")<CR><CR>
+nmap <Leader>igr :Gtags -ir <C-R>=expand("<cword>")<CR><CR>
+nmap <Leader>igs :Gtags -is <C-R>=expand("<cword>")<CR><CR>
+nmap <Leader>igg :Gtags -igo <C-R>=expand("<cword>")<CR><CR>
+nmap <Leader>igp :Gtags -iPo <C-R>=expand("<cword>")<CR><CR>
+nmap <Leader>ige :Gtags -ige <C-R>=expand("<cword>")<CR><CR>
+     
+"위의 사용법과 동일하며, 한가지 차이점은 위의 명령은 현재 커서 위치의 string으로 검색
+"아래 명령은 검색하려는 string을 직접 입력함
+nmap <Leader>ld :Gtags
+nmap <Leader>lr :Gtags -r
+nmap <Leader>ls :Gtags -s
+nmap <Leader>lg :Gtags -go
+nmap <Leader>lp :Gtags -Po
+nmap <Leader>le :Gtags -ge
+     
+nmap <Leader>ild :Gtags -i
+nmap <Leader>ilr :Gtags -ir
+nmap <Leader>ils :Gtags -is
+nmap <Leader>ilg :Gtags -igo
+nmap <Leader>ilp :Gtags -iPo
+nmap <Leader>ile :Gtags -ige
 
 

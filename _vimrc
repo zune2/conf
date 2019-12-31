@@ -39,15 +39,17 @@ Plugin 'tomasr/molokai'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'bogado/file-line'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'rdnetto/YCM-Generator'
 Plugin 'vim-scripts/Blueshift'
 Plugin 'mattn/emmet-vim'
-
+Plugin 'ayu-theme/ayu-vim'
 call vundle#end()
 "Plugin 'gu-fan/riv.vim'
 "Plugin 'gu-fan/InstantRst'
 "Plugin 'gu-fan/rhythm.css'
+"Plugin 'xavierd/clang_complete'
+"Plugin 'ervandew/supertab'
+"Plugin 'Valloric/YouCompleteMe'
+"Plugin 'rdnetto/YCM-Generator'
 
 set nu				
 set smartindent
@@ -69,10 +71,6 @@ set t_ut=
 "colorscheme molokai
 "let g:dracula_italic = 0
 "colorscheme dracula
-
-"highlight Normal ctermbg=None
-colorscheme codedark
-"colorscheme molokai
 
 
 let mapleader = ","
@@ -157,46 +155,64 @@ syntax enable
 " END Vim powerline setting ======================================================
 
 "---------------------------------------------------------------
-"UltiSnips
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-let g:UltiSnipsEditSplit="vertical"
+"NERDTree 
+let g:NERDTreeWinPos = "right"
+"---------------------------------------------------------------
 
 xnoremap <LEADER>c <ESC>:'<,'>:w !python3<CR>
 
 "---------------------------------------------------------------
-let g:ycm_key_list_select_completion=[]
-let g:ycm_key_list_previous_completion=[]
-let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+"UltiSnips
+" let g:UltiSnipsExpandTrigger="<tab>"
+" let g:UltiSnipsJumpForwardTrigger="<tab>"
+" let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+" let g:UltiSnipsEditSplit="vertical"
+
+
+"---------------------------------------------------------------
+" let g:ycm_key_list_select_completion=[]
+" let g:ycm_key_list_previous_completion=[]
+" let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 "map <C-]> :YcmCompleter GoToImprecise<CR>
-set tags+=./.tags
+" set tags+=./.tags
 "---------------------------------------------------------------
 
 
 "---------------------------------------------------------------
 " Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+ set statusline+=%#warningmsg#
+ set statusline+=%{SyntasticStatuslineFlag()}
+ set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+ let g:syntastic_auto_loc_list = 1
+ let g:syntastic_check_on_open = 1
+ let g:syntastic_check_on_wq = 0
 
-let g:syntastic_cpp_check_header = 1
-let g:syntastic_cpp_compiler = 'g++'
-let g:syntastic_cpp_compiler_options = "-std=c++11 -Wall -Wextra -Wpedantic"
-let g:syntastic_c_compiler_options = "-std=c11 -Wall -Wextra"
+ let g:syntastic_cpp_check_header = 1
+ let g:syntastic_cpp_compiler = 'g++'
+ let g:syntastic_cpp_compiler_options = "-std=c++11 -Wall -Wextra -Wpedantic"
+ let g:syntastic_c_compiler_options = "-std=c11 -Wall -Wextra"
 
-let g:syntastic_c_check_header = 1
-let g:syntastic_c_clang_check_post_args = ""
-let g:syntastic_clang_check_config_file = "./compile_commands.json"
+ let g:syntastic_c_check_header = 1
+ let g:syntastic_c_clang_check_post_args = ""
+ let g:syntastic_clang_check_config_file = "./compile_commands.json"
 "---------------------------------------------------------------
 "colorscheme	morning
 
-"---------------------------------------------------------------
-"NERDTree 
-let g:NERDTreeWinPos = "right"
-"---------------------------------------------------------------
+"let g:clang_library_path='/usr/lib/llvm-3.8/lib'
+
+"set pumheight=10             " so the complete menu doesn't get too big
+"set completeopt-=preview
+"set completeopt=menu,longest " menu, menuone, longest and preview
+
+"let g:SuperTabDefaultCompletionType='context'
+"let g:clang_complete_auto=0  " I can start the autocompletion myself, thanks..
+"let g:clang_snippets=1       " use a snippet engine for placeholders
+"let g:clang_snippets_engine='ultisnips'
+"let g:clang_auto_select=2  
+
+
+highlight Normal ctermbg=None
+colorscheme codedark
+"colorscheme molokai

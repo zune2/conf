@@ -47,11 +47,11 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'vim-scripts/Blueshift'
 Plugin 'mattn/emmet-vim'
 Plugin 'ayu-theme/ayu-vim'
+Plugin 'xavierd/clang_complete'
 call vundle#end()
 "Plugin 'gu-fan/riv.vim'
 "Plugin 'gu-fan/InstantRst'
 "Plugin 'gu-fan/rhythm.css'
-"Plugin 'xavierd/clang_complete'
 "Plugin 'ervandew/supertab'
 "Plugin 'Valloric/YouCompleteMe'
 "Plugin 'rdnetto/YCM-Generator'
@@ -174,16 +174,16 @@ xnoremap <LEADER>c <ESC>:'<,'>:w !python3<CR>
 
 "---------------------------------------------------------------
 "UltiSnips
-" let g:UltiSnipsExpandTrigger="<tab>"
-" let g:UltiSnipsJumpForwardTrigger="<tab>"
-" let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-" let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsEditSplit="vertical"
 
 
 "---------------------------------------------------------------
-" let g:ycm_key_list_select_completion=[]
-" let g:ycm_key_list_previous_completion=[]
-" let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+"let g:ycm_key_list_select_completion=[]
+"let g:ycm_key_list_previous_completion=[]
+"let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 "map <C-]> :YcmCompleter GoToImprecise<CR>
 " set tags+=./.tags
 "---------------------------------------------------------------
@@ -211,17 +211,18 @@ let g:syntastic_always_populate_loc_list = 1
 "---------------------------------------------------------------
 "colorscheme	morning
 
-"let g:clang_library_path='/usr/lib/llvm-3.8/lib'
+let g:clang_library_path='/usr/lib/llvm-3.8/lib'
 
-"set pumheight=10             " so the complete menu doesn't get too big
-"set completeopt-=preview
-"set completeopt=menu,longest " menu, menuone, longest and preview
+set pumheight=10             " so the complete menu doesn't get too big
+set completeopt-=preview
+set completeopt=menu,longest " menu, menuone, longest and preview
 
-"let g:SuperTabDefaultCompletionType='context'
-"let g:clang_complete_auto=0  " I can start the autocompletion myself, thanks..
-"let g:clang_snippets=1       " use a snippet engine for placeholders
-"let g:clang_snippets_engine='ultisnips'
-"let g:clang_auto_select=2  
+let g:SuperTabDefaultCompletionType='context'
+let g:clang_complete_auto=0  " I can start the autocompletion myself, thanks..
+let g:clang_snippets=1       " use a snippet engine for placeholders
+let g:clang_snippets_engine='ultisnips'
+let g:clang_auto_select=2  
+let g:clang_use_library=1
 
 nmap <Leader>gd :Gtags <C-R>=expand("<cword>")<CR><CR> 
 ",gr 입력. 현재 cursor가 위치한 string으로 reference검색.사용하는 곳의 위치를 보여줌.

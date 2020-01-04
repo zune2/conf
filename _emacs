@@ -91,10 +91,12 @@ font fontset
 (global-set-key (kbd "<f11>") 'org-agenda)
 (global-set-key (kbd "C-c c") 'org-capture)
 
-(setq org-archive-mark-done nil)
-;(setq org-archive-location "~/Dropbox/orgzly/archive.org::* Archived Tasks")
+;(setq org-archive-mark-done nil)
+;;(setq org-archive-location "~/Dropbox/orgzly/archive.org::* Archived Tasks")
 (setq org-archive-location "~/Dropbox/orgzly/archive.org::")
 
+;; C-x C-w : refile
+(setq org-refile-targets '(("archive.org" :level . 1)))
 
 ;(use-package org-bullets
 ;  :ensure t

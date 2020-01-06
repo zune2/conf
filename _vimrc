@@ -20,6 +20,7 @@ set secure
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'phanviet/vim-monokai-pro'
 Plugin 'itchyny/lightline.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
@@ -55,7 +56,6 @@ call vundle#end()
 "Plugin 'ervandew/supertab'
 "Plugin 'Valloric/YouCompleteMe'
 "Plugin 'rdnetto/YCM-Generator'
-
 set nu				
 set smartindent
 set expandtab
@@ -151,10 +151,6 @@ nmap <C-@><C-@>i
 	\:vert scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
 nmap <C-@><C-@>d
 	\:vert scs find d <C-R>=expand("<cword>")<CR><CR>
-
-
-
-
 
 syntax enable
 

@@ -256,16 +256,3 @@ nmap <Leader>ilg :Gtags -igo
 nmap <Leader>ilp :Gtags -iPo
 nmap <Leader>ile :Gtags -ige
 
-"for vim-airline
-let g:airline#extensions#tabline#enabled = 1 " turn on buffer list
-let g:airline_theme='hybrid'
-set laststatus=2 " turn on bottom bar
-
-" lightline
-let g:lightline = {
-  \     'active': {
-  \         'left': [['mode', 'paste' ], ['readonly', 'filename', 'modified']],
-  \         'right': [['lineinfo'], ['percent'], ['fileformat', 'fileencoding']]
-  \     }
-  \ }
-

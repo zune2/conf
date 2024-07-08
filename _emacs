@@ -13,13 +13,15 @@
 ;; fontify code in code blocks
 (setq org-src-fontify-natively t)
 
-(add-to-list 'load-path "/home/mjpark/work/org-asciidoc")
-(require 'ox-asciidoc)
+;(add-to-list 'load-path "/home/mjpark/work/org-asciidoc")
+; (require 'ox-asciidoc)
 :
 ;(require 'ox-texinfo)
 ;(require 'ox-gfm)
-;(load-theme 'tango)
-;(load-theme 'tango-2)
+
+					;(load-theme 'tango)
+					;(load-theme 'tango-2)
+(load-theme 'tango-dark)
 
 
 ;(add-to-list 'custom-theme-load-path "/home/mjpark/.emacs.d/elpa/dracula-theme-20180416.652")
@@ -52,15 +54,15 @@ font fontset
 ;; ELPA
 ;; Package system
 (require 'package)
-(setq package-archives '(("melpa" . "https://melpa.org/packages/")
-			 ("org" . "http://orgmode.org/elpa/")
-			 ("gnu" . "http://elpa.gnu.org/packages/")))
 
 
-;;(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-;;			 ("marmalade" . "https://marmalade-repo.org/packages/")
-;;			 ("melpa" . "http://melpa.org/packages/")
-;;			 ("user42" . "http://download.tuxfamily.org/user42/elpa/packages/")))
+(setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
+                         ("marmalade" . "https://marmalade-repo.org/package/")
+                         ("melpa" . "https://melpa.org/packages/")))
+
+;(setq package-archives '(("melpa" . "https://melpa.org/packages/")
+;			 ("org" . "http://orgmode.org/elpa/")
+;			 ("gnu" . "http://elpa.gnu.org/packages/")))
 (package-initialize)
 ;;(package-refresh-contents)
 ;(setq auto-install-packages
@@ -129,7 +131,7 @@ font fontset
  '((emacs-lisp . nil)
       (C . t)))
 
-(load-theme 'tangotango t)
+;(load-theme 'tangotango t)
 
 (setq org-refile-targets
       '(("SwCert.org" :maxlevel . 1)
@@ -137,3 +139,17 @@ font fontset
 
 (setq browse-url-browser-function 'browse-url-generic
             browse-url-generic-program "google-chrome")
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (tango-2-theme tango-plus-theme tangonov-theme tangotango-theme))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
